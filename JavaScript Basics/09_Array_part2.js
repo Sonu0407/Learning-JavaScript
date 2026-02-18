@@ -29,13 +29,25 @@ const single_Array = another_Array.flat(Infinity) // flat makes the array inside
 
 // array check and create array by method
 
-console.log(Array.isArray("SonuS")); // checks if SonuS is an array or not
-console.log(Array.from("SonuS")); // create an array ['S', 'o', 'n', 'u', 'S']
+// console.log(Array.isArray("SonuS")); // checks if SonuS is an array or not
+// console.log(Array.from("SonuS")); // create an array ['S', 'o', 'n', 'u', 'S']
 // console.log(Array.isArray("SonuS"));
 
 let name = ['sonu']
 
-console.log(Array.isArray(name)); // o/p: true because name is an array
+// console.log(Array.isArray(name)); // o/p: true because name is an array
+
+console.log(Array.from({name: "Sonu"})) // interesting o/p: [] because it can't do this operation
+
+let score1 = 100
+let score2 = 200
+let score3 = 300
+
+console.log(Array.of(score1, score2, score3));
+
+
+
+
 
 
 
