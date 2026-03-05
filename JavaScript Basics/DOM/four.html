@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>Yeah Working !!!</h1>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+
+    <script>
+        function addlanguage (language_Name) {
+            // first create element you want to add
+            const li = document.createElement('li');
+            li.innerHTML = `${language_Name}`
+            document.querySelector('.language').appendChild(li)
+        }
+
+        addlanguage("Python")
+        addlanguage("java")
+
+        // optimized way to do above one
+        function add_optimized_language(language_Name) {
+            const li = document.createElement('li')
+            li.appendChild(document.createTextNode(language_Name))
+            document.querySelector('.language').appendChild(li)
+        }
+
+        add_optimized_language("Golang")
+
+        //edit values
+        const secondLanguage = document.querySelector("li:nth-child(2)")
+        // first way is 
+        secondLanguage.innerHTML = "Apple"
+        // or optimized way is 
+        const newli = document.createElement('li')
+        newli.textContent = "Swift"
+        secondLanguage.replaceWith(newli)
+        // or changing the outer html itself
+        const firstlanguage = document.querySelector('li:first-child')
+        firstlanguage.outerHTML = '<li>My first Language</li>'
+
+
+        // remove items
+        const last_language = document.querySelector("li:last-child")
+        last_language.remove()
+
+
+        
+
+
+    </script>
+</body>
+</html>

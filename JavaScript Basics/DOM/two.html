@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM (Document Object Model)</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    // this selects only one query and note the first one only!!
+    const parent = document.querySelector('.parent')
+    //console.log(parent);
+    //console.log(parent.children); // you get a HTML collection
+    //console.log(parent.children[0]);// you monday the first element
+    //console.log(parent.children[3]);// last element that is tuesday access by the index numbering
+    //console.log(parent.children[2].innerHTML);// display the content that we have given that is wednesday
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML);
+        
+    // }
+    
+    // changing color of the element
+    parent.children[3].style.color = "red"
+    parent.children[1].style.color = "red"
+
+    // firstelementchild direct access
+    //console.log(parent.firstElementChild); // you get monday because first element is monday itself
+
+    // lastElementChild direct access
+    //console.log(parent.lastElementChild);
+
+
+    // access child
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne);
+    // from child to parent backwords
+    console.log(dayOne.parentElement);
+
+    console.log(dayOne.nextElementSibling.innerHTML); // tuesday and monday's brother is tuesday then tuesday's brother is wednesday and so on....
+    
+    console.log("Nodes :", parent.childNodes);// in nodelist each space is counted and even each line also
+    
+    
+    
+    
+    
+    
+    
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <script>
+        // creating elements in document
+        const div = document.createElement('div')
+        console.log(div); // <div></div>
+        const h1 = document.createElement('h1')
+        console.log(h1); // <h1></h1>
+        // add attributes to div element
+        div.className = "it_is_working"
+        h1.className = "This is h1"
+        div.id = "This is ID"
+        // adding text in it
+        div.innerText = "Sonu is Doing his Best"
+
+        /// this whole above things are just stored in the memory itself and to display on the STD (Standard Output Screen) we have to say to document to append this div
+        document.body.append(div)
+        
+    </script>
+</body>
+</html>
