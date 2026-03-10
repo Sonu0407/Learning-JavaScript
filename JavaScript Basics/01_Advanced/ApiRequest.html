@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete. -->
+<script>
+    const requestUrl = 'https://jsonplaceholder.typicode.com/posts'
+    const xhr = new XMLHttpRequest(); // this for create a new API request
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState); // output you will get is numbers check the above notes and get a clarity
+        if (xhr.readyState === 4) {
+            // console.log(responseText); // this doesn't work b ecause you didn't specific which responseText
+            // so
+            // console.log(this.responseText); // this works because your specifically saying this function's response data
+            const data = this.responseText;
+            console.log(data); // api done
+
+            // but when i want to check some particular key how
+            console.log(data.id); // now we get undefined because check the type of the data your printing
+
+            console.log(typeof data); // this is string type so that's why your not able to access the id's now change it to JSON format how?
+
+            const data_converted = JSON.parse(this.responseText); // use full caps JSON.parse now this convert now you can access key or pairs anything.
+
+            console.log(data_converted); // now you get output dictionary or array or something but not string
+
+            // now access the ID
+            console.log(data_converted[0].id); // now you even get in suggestions also. [] is for index i know your smart
+
+            
+            
+            
+
+            
+        }
+    }
+    xhr.send();
+</script>
+</body>
+</html>

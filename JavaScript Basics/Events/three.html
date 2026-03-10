@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+<script>
+    // setInterval(function() {
+    //     console.log("Sonu")
+    // }, 1000)
+
+    // let time = new Date();
+
+    // setInterval(function(){
+    //     console.log(time.toLocaleTimeString());
+    // }, 1000)
+    
+    
+
+    // const sayDate = function() {
+    //     console.log();
+    // }
+
+    // setInterval(sayDate, 1000)
+
+    const sayDate = function(str){
+        console.log(str, Date.now());
+        
+    }
+
+    setInterval(sayDate, 1000, "hi")
+</script>
+
+</body>
+</html>
